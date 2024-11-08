@@ -19,7 +19,7 @@ WORKDIR /home/coder
 # Apply VS Code settings
 COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 # Fix permissions for code-server
-RUN sudo chown -R coder:coder /home/coder/.local
+# RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
