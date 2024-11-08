@@ -1,6 +1,6 @@
 # Start from the code-server Debian base image
 # FROM codercom/code-server:4.9.0
-FROM linuxserver/code-server:latest
+FROM lscr.io/linuxserver/code-server:latest
 
 # Use bash shell
 ENV SHELL=/bin/bash
@@ -12,7 +12,7 @@ RUN curl https://rclone.org/install.sh | sudo bash
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
-RUN useradd -m 
+RUN useradd -m coder
 USER coder
 WORKDIR /home/coder
 
